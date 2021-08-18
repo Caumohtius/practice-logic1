@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Задача</title>
+</head>
+<body>
+    <h1>Задачка на логику</h1>
+    <p>Вставить в пропущенные участки кода JS элементы из следующего списка(могут быть лишние) для составления фразы "a noise annoys an oyster" в консоли</p>
+    <p>Сам код:<pre><code>
+        let poem;
+        poem = "";
+        let x = 0;
+        while ( __________ ) {
+        _____________________________
+        if ( x < 1 ) {
+        ___________________________
+        }
+        _____________________________
+        if ( __________ ) {
+        ____________________________
+        ___________
+        }
+        if ( x == 1 ) {
+        ____________________________
+        }
+        if ( ___________ ) {
+        ____________________________
+        }
+        ____________
+        }
+        console.log(poem);
+    </code></pre></p>
+
+    <ul style="list-style:none;">
+        <li>poem = poem + "a";</li>
+        <li>poem = poem + " ";</li>
+        <li>poem = poem + "n";</li>
+        <li>poem = poem + "an";</li>
+        <li>poem = poem + "noys ";</li>
+        <li>poem = poem + "oise ";</li>
+        <li>poem = poem + " oyster";</li>
+        <li>poem = poem + "annoys";</li>
+        <li>poem = poem + "noise";</li>
+        <li>x = x + 1</li>
+        <li>x = x - 1</li>
+        <li>x = x + 2</li>
+        <li>x = x - 2</li>
+        <li>x &#60; 1</li>
+        <li>x &#60; 4</li>
+        <li>x &#62; 1</li>
+        <li>x &#62; 0</li>
+        <li>x &#62; 3</li>
+    </ul>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <input class="accordion-item__input" type="checkbox" name="accordion" id="accordion-1">
+        <label class="accordion-item__trigger" for="accordion-1">
+          Решение
+        </label>
+        <div class="accordion-item__content">
+          <pre><code>
+            let poem;
+            poem = "";
+            let x = 0;
+            while (x < 4) {
+              poem = poem + "a";
+              if (x < 1) {
+                poem = poem + " ";
+              }
+              poem = poem + "n";
+              if (x < 1) {
+                x = x - 1;
+                poem = poem + "oise ";
+              }
+              if (x == 1) {
+                poem = poem + "noys ";
+              }
+              if (x > 1) {
+                poem = poem + " oyster";
+              }
+              x = x + 2;
+            }
+            console.log(poem);
+
+            ИЛИ
+
+            let poem;
+            poem = "";
+            let x = 0;
+            while (x < 4) {
+              poem = poem + "a";
+              if (x < 1) {
+                poem = poem + " ";
+              }
+              poem = poem + "n";
+              if (x > 1) {
+                x = x + 2;
+                poem = poem + " oyster";
+              }
+              if (x == 1) {
+                poem = poem + "noys ";
+              }
+              if (x < 1) {
+                poem = poem + "oise ";
+              }
+              x = x + 1;
+            }
+            console.log(poem);
+          </code></pre>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

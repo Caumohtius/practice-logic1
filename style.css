@@ -1,0 +1,56 @@
+body {
+    font-size: 16px;
+}
+
+code {
+
+}
+
+.accordion-item {
+    position: relative;
+
+    text-align: left;
+}
+
+.accordion-item__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+}
+
+.accordion-item__trigger {
+    position: relative;
+    display: block;
+    padding: 1rem;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid #E7EBF0;
+
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.accordion-item__content {
+    display: none;
+
+    border-bottom: 1px solid #E7EBF0;
+}
+
+.accordion-item__trigger:hover {
+    color: #01C165;
+}
+
+.accordion-item__input:checked ~ .accordion-item__trigger {
+    color: #01C165;
+}
+
+.accordion-item__input:checked ~ .accordion-item__trigger:hover {
+    color: #893636;
+}
+
+.accordion-item__input:checked ~ .accordion-item__content {
+    display: block;
+}
